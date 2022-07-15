@@ -1,0 +1,297 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: rgb(236, 236, 236);
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    width: 100%;
+    height: 100%;
+}
+
+#page {
+    background-color: lime;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*** Navigation **/
+nav {
+    background-color:rgb(158, 202, 225);
+    width: 400px;
+    min-width: 300px;
+    position: relative;
+}
+
+nav > h1 {
+    margin: 30px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+nav > h1 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#filter {
+    margin: 30px;
+}
+
+#filter > .filter-option {
+    background: rgb(255, 255, 255);
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter > .filter-option > select {
+    margin-top: 10px;    
+}
+
+#project-info{
+    background: rgba(0,0,0,0.15);
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+#project-info > h1 {
+    margin: 0 0 20px 0;
+}
+
+#project-info > a {
+    display: inline-block;
+    width: 100%;
+    margin: 3px 0;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+
+    transition: color 200ms ease;
+}
+
+#project-info > a:hover {
+    color: #00C8FF;
+}
+
+/** MAIN **/
+main {
+    background-color: rgb(33, 67, 85);
+    width: 100%;
+    min-width: 800px;
+    color: #ffffff;
+    overflow-y: auto;
+    position: relative;
+}
+
+main > h1 {
+    margin: 0 0 40px 0;
+    padding: 40px 40px 10px 40px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(33, 67, 85);;
+}
+
+main > h2 {
+    margin: 0;
+    padding: 20px 40px 0 40px;
+    font-size: 18px;
+}
+main > h3 {
+    margin: 0;
+    padding: 20px 40px 0 40px;
+    font-size: 12px;
+}
+
+main > p {
+    margin: 20px 40px;
+}
+
+main > hr {
+    margin: 40px;
+    background-color: rgba(255, 255, 255, 0.287);
+    border: none;
+    height: 2px;
+
+}
+
+#showcase {
+    width: 700px;
+    min-height: 400px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    transition: all 200ms ease;
+}
+
+#tweet-prev,
+#tweet-next {
+    font-size: 70px;
+    color: rgb(0, 200, 255);
+    cursor: pointer;
+}
+
+#tweet-prev {
+    padding-right: 40px;
+}
+
+#tweet-next {
+    padding-left: 40px;
+}
+
+#tweet {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+#target {
+    display: flex;
+    margin: 5px 0;
+    justify-content: center;
+}
+
+
+#target-center {
+    /* background: blue; */
+    width: calc(50%);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#target-insight {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.target-box {
+    background: rgb(0,0,0);
+    width: calc(50% - 40px);
+    height: 35px;
+    padding: 5px;
+}
+
+.target-box > a {
+    color: #00C8FF;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin: 3px;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+#details {
+    display: flex;
+    margin: 40px;
+    justify-content: space-between;
+}
+
+#details h1 {
+    color: rgb(0, 200, 255);
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+#details-left {
+    /* background: blue; */
+    width: calc(50% - 20px);
+}
+
+#insights {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.insights-box {
+    background: rgba(0, 0, 0, 0.5);
+    width: calc(50% - 40px);
+    height: 150px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.insights-box > a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin: 3px;
+    opacity: 0.6;
+    transition: opacity 200ms ease;
+}
+
+.insights-box > a:hover {
+    opacity: 1;
+}
+
+
+
+#similar-tweets {
+
+}
+
+#similar-tweets > .bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 10px;
+}
+
+#similar-tweets > .bar > * {
+    height: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 30px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+#similar-tweets > .bar > .bar-indicator {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+    left: 0;
+    transition: width 500ms ease;
+}
+
+#similar-tweets > .bar > .bar-text {
+    left: 10px;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#similar-tweets > .bar > .bar-type {
+    right: 10px;
+}
+
+#statistics {
+    /* background: lime; */
+    width: calc(50% - 20px);
+}
+
+#charts {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background: rgba(214, 214, 214, 0.8);
+}
+
+#charts > img {
+    width: 100%;
+}
