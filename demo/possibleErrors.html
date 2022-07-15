@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Animation Guideline</title>
+    
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+
+        <div id="page">
+            <nav>
+                <h1 style="opacity: 1;"><a href="index.html">🏠 Back Home</a></h1>
+
+                <div id="project-info">
+                    <h1>Project Information</h1>
+                    <a href="animationGuideline.html">Animation Guideline</a>
+                    <a href="dataStatements.html">Data Statements</a>
+                    <a href="possibleErrors.html">Possible Errors</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </nav>
+            <main>
+                <h1>Possible Errors</h1>
+                <p>The intention of the tweet was identified as the main source of the top-3 types of errors. These include: (a) indirect, where the EU is not directly mentioned in the tweet but rather indirect. (b) Annotation error, where the Human annotator underlay an error, (c) suggestions, which were not seen as such but rather as a critique, (d) demanding tweet, which is more seen as a suggestion and therefore labeled as "favour", rather than "against". Secondly, we identified tweets where specific, known in NLP problems occur: (e) sarcasm, (f) misspelling and (g) polarizing tweets. The latter means that a tweet consists of a variety of polarizing sentences mixed together. Finally, we identified dataset specific problems: (h) topic and (i) EU impact. In those error types, several topics were available in the tweet text, where the model suggests a label for one of them, while the tweet is assigned to another topic. Or the connection to the EU is indirectly given or missing.</p>
+
+
+                <h2>a) Indirect </h2>
+                <p>Caused by no direct mention of EU in tweet text. <br>Example Error from Favour to Unrelated: #moderna just got approval from EMA  #Covid19 #vaccine #NewYear #USA</p>
+
+                <h2>b) Annotation </h2>
+                <p>Human annotation error.<br>
+                    Example Error from Favour to Unrelated: As a guest I feel very safe here in Taiwan. Here life goes on normally. In Europe and the USA the 2nd wave is coming in. <br>
+                    Example from Comment to Against: The @EU_Commission did it again: Politically motivated #ruleoflaw report, a compilation of our critics favorite accusations, takes issue with our new child protection law. EC continues to care more about the LGBTQ lobby than the rights of national minorities or anti-Semitism.</p>
+
+
+                    <h2>c) Suggestion </h2>
+                    <p>A suggestion which is not seen as such.<br>
+                        Example Error from Favour to Against: We recommend @dreynders, who stress that civil society works in "unstable environment" and faces challenges like access to foreign funding.     
+                    </p>
+
+                    <h2> d) Demanding</h2>
+                    <p> A demanding manner which is not seen as such.<br>
+                        Example from Against to Comment: He declares himself ”Covid-Franco” for six months and the persecution of Catalans continues with the support of king @CasaReal. EU and UN must act!</p>
+
+                    <h2> e) Sarcasm</h2>
+                    <p> Sarcasm.<br>
+                        Example from Against to Unrelated: Have been there cases where Ministers have un-made a forged coreper agreement, or is that unprecedented? asking for an enemy here...</p>
+
+                    <h2>f) Misspelling </h2>
+                    <p> Wording in tweet consist of wide range of misspelled words.<br>
+                        Example from Against to Unrelated: A new #Covid19 strain is sweeping thru Europe and will soon B here 2. Yet another r/eason this season WHY the V wont B Effective.</p>
+
+                    <h2> g) Polarizing</h2>
+                    <p> Variety of polarizing sentences in one tweet.<br>
+                        Example from Against to Favour: @LesNews24 Human rights and EU values violations️. Good news is that Polish women are strong and they will not stop.<br>
+                        Example from Comment to Unrelated: Europe, once again have gone back into lockdown because the cases and deaths are rising rapidly and they don't want that.meanwhile the UK gears up for another round of clapping on a Thursday night. #COVID19 #covidiots #BorisHasFailedTheUK #EatNowtToHelpOut</p>
+
+                    <h2>h) Topic </h2>
+                    <p> Different topic clearly mentioned other than the original one.<br>
+                        Example from Against to Unrelated: Everyone experiencing #Covid19 vaccine delays because of dealings with massive amount of red tape of the #EU can now see why the #UK left #BREXIT <br>
+                        Example from Unrelated to Comment: Negotiations with #manchester failed over £5m. Negotiations with the #eu failing on fishing - 0.1% of the UK economy. The #government do not know which battles to pick and cannot negotiate. #sendhelp #fishingindustry #fisheries #COVID19</p>
+
+                    <h2>i) EU Impact </h2>
+                    <p> No direct opinion on the EU.<br>
+                        Example from Unrelated to Favour: help in #EndCorruption in Ethiopia. Help in establishing #RuleOfLaw, #Transparency.</p>
+            </main>
+        </div>
+       
+    </body>
+</html>
