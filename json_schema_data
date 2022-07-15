@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "tweet_ID": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "hashtags": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "mentions": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "similar": {
+          "type": "object",
+          "properties": {
+            "similar_tweet_ID": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "similar_tweet_ID",
+          ]
+        }
+      },
+      "required": [
+        "text",
+        "target",
+        "label",
+        "hashtags",
+        "mentions",
+        "similar"
+      ]
+    }
+  },
+  "required": [
+    "tweet_ID"
+  ]
+}

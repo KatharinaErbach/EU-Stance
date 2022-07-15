@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "topics": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "stance": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "hashtags": {
+      "type": "object",
+      "properties": {
+        "topic_a": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "topic_b": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "topic_c": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+	}
+      },
+      "required": [
+        "topic_a",
+        "topic_b",
+        "topic_c"
+      ]
+    }
+  },
+  "required": [
+    "topics",
+    "stance",
+    "hashtags"
+  ]
+}
